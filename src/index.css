@@ -1,13 +1,8 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Caramel&family=Dancing+Script:wght@400;500;700&family=Dosis:wght@200;400&family=Island+Moments&family=Josefin+Sans:wght@100&family=Neonderthaw&family=Nunito:wght@200&family=Playfair+Display&family=Quicksand:wght@300&family=Raleway:wght@100&family=The+Nautigal&family=Zen+Kurenaido&display=swap');
+ button {
+     @apply  bg-[#a29dff] shadow-lg  hover:bg-[#E4405F] hover:text-white rounded mr-4 p-2 text-lg text-black font-medium border-[0.14em]  ease-in-out duration-300
+ }
