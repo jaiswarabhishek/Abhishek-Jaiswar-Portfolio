@@ -15,7 +15,7 @@ function AboutMe() {
 
 
   return (
-    <motion.div 
+    <motion.div name="AboutMe"
 
        animate={{ opacity: 1, scale: 1 }}
                 transition={{
@@ -36,7 +36,7 @@ function AboutMe() {
         <img src={greet} className='block max-w-[6%] md:max-w-[7%] mx-2' alt="/" />
        </div>
 
-       <h3 className='md:pl-10 md:pr-10 mt-2 text-[0.87em] mx-auto md:mx-0 md:text-left text-center md:text-xl max-w-[90%]' >
+       <h3 className='md:pl-10 md:pr-10 mt-2 text-[1em] mx-auto md:mx-0 md:text-left text-left md:text-xl max-w-[90%]' >
           I'm a passionate full-stack web developer with 1 and a half years of experience. I have spent the last 2 years developing my skills as a software developer.I am a good problem solver. 3-star coder on Hackerrank. I am also interested in open source. This year, I participated in Hacktoberfest as a contributor and completed it successfully.
        </h3>
 

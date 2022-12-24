@@ -1,7 +1,4 @@
 
-
-
-
 export const skillData = [
 
     {
@@ -98,8 +95,12 @@ export const skillData = [
         id: 19,
         name:'Docker', 
         image: 'https://img.icons8.com/dusk/512/docker.png'
-    }
-   
+    },
+    {
+        id: 20,
+        name: 'Sql',
+        image: 'https://img.icons8.com/color/512/sql.png'
+    }  
 ]
 
 

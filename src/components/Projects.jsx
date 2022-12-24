@@ -1,16 +1,15 @@
 import React from 'react'
 import { projectData } from './ProjectsData';
 import { Button } from '@mui/material';
-
+import { motion } from 'framer-motion';
 
 function Projects() {
   return (
-    <div className='mt-10'>
+    <div className='mt-[4em]' name="Projects">
     <h1 className='md:pl-10 text-3xl font-bold text-center md:text-left md:text-4xl text-[#161351]'>Projects</h1>
-
     <div>
-  
-        <div className='flex md:flex-row flex-col justify-center md:w-[100%] w-[80%] md:mx-0 mx-auto  md:gap-16 gap-10 md:pl-10 md:pr-10 mt-10  '>
+        <div
+        className='flex flex-col md:grid md:grid-cols-3   justify-center md:w-[100%] w-[80%] md:mx-0 mx-auto  md:gap-16 gap-10 md:pl-10 md:pr-10 mt-10  '>
           
           {
             projectData.map((project)=>{
@@ -41,19 +40,12 @@ function Projects() {
               </div>
               
               </>
-
-
-
             })
           }
-
 
         </div>
 
     </div>
-
-
-
 
     </div>
   )

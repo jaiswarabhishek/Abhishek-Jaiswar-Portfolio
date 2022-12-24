@@ -8,6 +8,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import { Link, animateScroll as scroll } from 'react-scroll'
 
 
 function Navbar() {
@@ -28,7 +29,7 @@ const [state, setState] = React.useState({
 
   const list = (anchor) => (
     <Box
-      sx={{ width:250,background:'#e2e1fe',height:'100vh' }}
+      sx={{ width:250,background:'#e2e1fe',height:'100vh'}}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
@@ -37,7 +38,7 @@ const [state, setState] = React.useState({
         {['About Me', 'Skills', 'Projects', 'Certifications',"Contact Me"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
-            <ListItemText   primary={text} />
+            <ListItemText  primary={text} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -48,20 +49,30 @@ const [state, setState] = React.useState({
 
    
    return (
-    <div className='md:p-5 p-3 bg-[#a29dff]'>
+    <div  className='md:p-5 p-3 bg-[#a29dff]'>
 
         <div className='flex justify-between items-center'>
 
-            <h1 className='font-caramel text-xl  cursor-pointer text-black md:text-5xl'> Abhishek Jaiswar </h1>
+            <h1 className='font-caramel text-3xl  cursor-pointer text-black md:text-5xl'> Abhishek Jaiswar </h1>
 
             <div>
                 <ul className='hidden  md:flex gap-10    md:text-xl cursor-pointer'>
-                    <li className='hover:text-white ease-in-out duration-300' >About Me</li>
-                    <li className='hover:text-white ease-in-out duration-300' >Skills</li>
-                    <li className='hover:text-white ease-in-out duration-300' >Projects</li>
-                    <li className='hover:text-white ease-in-out duration-300' >Certifications</li>
-                    <li className='hover:text-white ease-in-out duration-300' >Contact Me</li>
+                    <li className='hover:text-white ease-in-out duration-300' >
+                      <Link activeClass="active" to="AboutMe" spy={true} smooth={true} offset={50} duration={500} > About Me</Link></li>
+                    <li className='hover:text-white ease-in-out duration-300' >
+
+                      <Link activeClass="active" to="Skills" spy={true} smooth={true} offset={50} duration={500} >Skills</Link> </li>
+                    <li className='hover:text-white ease-in-out duration-300' >
+
+                      <Link activeClass="active" to="Projects" spy={true} smooth={true} offset={50} duration={500} >Projects</Link> </li>
+                    <li className='hover:text-white ease-in-out duration-300' >
+
+                      <Link activeClass="active" to="Certifications" spy={true} smooth={true} offset={50} duration={500} >Certifications</Link> </li>
+                    <li className='hover:text-white ease-in-out duration-300' >
+
+                      <Link activeClass="active" to="ContactMe" spy={true} smooth={true} offset={50} duration={500} >Contact Me</Link> </li>
                 </ul>
+
       <div className='md:hidden bg-[#a29dff]  ' >
 
       {['left'].map((anchor) => (

@@ -8,7 +8,7 @@ function Skills() {
 
 
   return (
-    <div className='mt-16 '>
+    <div className='mt-16 ' name="Skills">
        
       <div>
         <h1 className='md:pl-10 text-3xl font-bold text-center md:text-left md:text-4xl text-[#161351] '>Skills</h1>
