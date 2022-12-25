@@ -35,13 +35,40 @@ const [state, setState] = React.useState({
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {['About Me', 'Skills', 'Projects', 'Certifications',"Contact Me"].map((text, index) => (
-          <ListItem key={text} disablePadding>
+       
+          <ListItem  disablePadding>
             <ListItemButton>
-            <ListItemText  primary={text} />
+             <Link activeClass="active" to="AboutMe" spy={true} smooth={true} offset={50} duration={500} > About Me</Link>
             </ListItemButton>
           </ListItem>
-        ))}
+          
+          
+          <ListItem  disablePadding>
+            <ListItemButton>
+             <Link activeClass="active" to="Skills" spy={true} smooth={true} offset={50} duration={500} >Skills</Link>
+            </ListItemButton>
+          </ListItem>
+          
+          
+           <ListItem  disablePadding>
+            <ListItemButton>
+             <Link activeClass="active" to="Projects" spy={true} smooth={true} offset={50} duration={500} >Projects</Link>
+            </ListItemButton>
+          </ListItem>
+          
+          
+          <ListItem  disablePadding>
+            <ListItemButton>
+             <Link activeClass="active" to="Certifications" spy={true} smooth={true} offset={50} duration={500} >Certifications</Link>
+            </ListItemButton>
+          </ListItem> 
+          
+          <ListItem  disablePadding>
+            <ListItemButton>
+         <Link activeClass="active" to="ContactMe" spy={true} smooth={true} offset={50} duration={500} >Contact Me</Link>
+            </ListItemButton>
+          </ListItem>
+      
       </List>
     </Box>
   );

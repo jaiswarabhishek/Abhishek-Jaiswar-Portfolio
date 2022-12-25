@@ -11,7 +11,7 @@ function Footer() {
        
        <div className='bg-[#a29dff] flex flex-col justify-center items-center pt-2'>
            
-           <i className='md:text-xl text-center text-[0.9em] mb-3 font-[400] text-black'>"I am born with wings
+           <i className='md:text-xl pt-5 text-center text-[0.9em] mb-3 font-[400] text-black'>"I am born with wings
             So, I am not meant for crawling
             I have wings, I will fly..."
            </i>

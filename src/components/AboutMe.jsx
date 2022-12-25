@@ -3,8 +3,12 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import Link from '@mui/material/Link';
+import { Link, animateScroll as scroll } from 'react-scroll'
 import { motion } from "framer-motion";
+import Reveal from 'react-reveal/Reveal';
+import Fade from 'react-reveal/Fade';
+
+
 
 function AboutMe() {
      const img ="https://img.freepik.com/premium-vector/programmer-engineering-development-coding-web-development-website-design-developer-vector_199064-126.jpg?w=740" ;
@@ -15,24 +19,18 @@ function AboutMe() {
 
 
   return (
-    <motion.div name="AboutMe"
+     <div name="AboutMe" >
+         <Fade bottom>
 
-       animate={{ opacity: 1, scale: 1 }}
-                transition={{
-                    duration: 1.5,
-                    delay: 0.3,
-                }}
-                initial={{ opacity: 0, scale: 0.7 }}
-
-                
-               
-    >
         <div className='flex  flex-col-reverse  justify-between md:flex-row md:items-center'>
 
         <div className=' mx-auto  md:mt-0 md:ml-2'>
+       
 
        <div className=' flex justify-center items-center md:mt-0 mt-7'>
+    
          <h1  className='md:text-4xl text-xl font-[400] text-[#161351] ' >Hello folks! , I'm Abhishek</h1> 
+
         <img src={greet} className='block max-w-[6%] md:max-w-[7%] mx-2' alt="/" />
        </div>
 
@@ -63,20 +61,25 @@ function AboutMe() {
        <div className='flex md:flex-row flex-col  md:pl-10 mt-5  gap-4'>
 
         <button className='border-0 rounded-md text-white md:w-auto md:mx-0 w-[70%] mx-auto  p-3 text-[1.1em]'>Resume</button>
-        
-        <button className='border-0 rounded-md text-white md:w-auto w-[70%] md:mx-0 mx-auto   p-3 text-[1.1em]'>Contact Me</button>
 
+          <button className='border-0 rounded-md text-white md:w-auto w-[70%] md:mx-0 mx-auto   p-3 text-[1.1em]'>
+        <Link activeClass="active" to="ContactMe" spy={true} smooth={true} offset={50} duration={500} >
+          Contact Me
+         </Link>
+         </button>
        
        </div>
 
 
 
           </div>
+     
     
        <img src={img} className="block max-w-[70%] mt-5 md:mt-0 md:max-w-[40%] mx-auto md:mr-2 object-cover" alt="/" />
 
        </div>
-    </motion.div>
+       </Fade>
+    </div>
   )
 }
 

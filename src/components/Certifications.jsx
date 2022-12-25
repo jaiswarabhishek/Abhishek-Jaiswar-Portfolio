@@ -1,6 +1,6 @@
 import React from 'react'
 import { certificateData } from './CertificateData'
-
+import Fade from 'react-reveal/Fade';
 function Certifications() {
   return (
     <div className='mt-[4em]' name="Certifications" >
@@ -10,6 +10,8 @@ function Certifications() {
     <div className='pl-2 md:pl-10'>
 
       <div className='md:grid md:grid-cols-3 flex flex-col mx-auto  gap-5 mt-10 md:w-[100%] w-[90%]' >
+        <Fade right>
+
         {
           certificateData.map((certificate)=>{
             const {id,name,image,link} =certificate;
@@ -30,7 +32,7 @@ function Certifications() {
           })
         }
 
-
+     </Fade>
       </div>
 
     </div>

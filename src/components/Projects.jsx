@@ -2,6 +2,7 @@ import React from 'react'
 import { projectData } from './ProjectsData';
 import { Button } from '@mui/material';
 import { motion } from 'framer-motion';
+import Fade from 'react-reveal/Fade';
 
 function Projects() {
   return (
@@ -16,8 +17,9 @@ function Projects() {
               const {id,name,image,tech, description,github,live} = project;          
 
               return <>
-
+          <Fade left>
               <div key={id} className=' bg-[#e2e1fe]   rounded-md shadow-lg  p-8 hover:scale-105 ease-in-out duration-300 cursor-pointer '>
+                
                 <div>
                   <img className='rounded-md mb-3'  src={image} alt="" />
                 </div>
@@ -38,6 +40,7 @@ function Projects() {
                   <button className='p-2 border-none font-[400] md:w-[25%] w-[30%] bg-[#E4405F] text-white '>Live</button>
                 </div>
               </div>
+              </Fade>
               
               </>
             })
