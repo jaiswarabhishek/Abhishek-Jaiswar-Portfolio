@@ -5,9 +5,15 @@ import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
+import { ListItemIcon } from '@mui/material';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import PersonIcon from '@mui/icons-material/Person';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
+import AddTaskIcon from '@mui/icons-material/AddTask';
+import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
+import LinkIcon from '@mui/icons-material/Link';
 import { Link, animateScroll as scroll } from 'react-scroll'
 
 
@@ -22,50 +28,65 @@ const [state, setState] = React.useState({
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
     }
-
-    setState({ ...state, [anchor]: open });
+    
+    setState({[anchor]: open });
+    
     setMenu(!menu);
   };
 
   const list = (anchor) => (
     <Box
-      sx={{ width:250,background:'#e2e1fe',height:'100vh'}}
-      role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-    >
-      <List>
+      sx={{ width:250,background:'#e2e1fe',height:'100vh',paddingTop:'2em'}}
+      role="presentation" >
+      <List >
        
           <ListItem  disablePadding>
-            <ListItemButton>
-             <Link activeClass="active" to="AboutMe" spy={true} smooth={true} offset={50} duration={500} > About Me</Link>
+            <ListItemButton  >
+              <ListItemIcon>
+           <PersonIcon sx={{color:'black'}}/>
+              </ListItemIcon>
+          <Link className='w-[100%] text-xl'  onClick={toggleDrawer('left', false)} onKeyDown={toggleDrawer('left', false)} activeClass="active" to="AboutMe" spy={true} smooth={true} offset={50} duration={500} > About Me</Link>
             </ListItemButton>
           </ListItem>
           
           
           <ListItem  disablePadding>
             <ListItemButton>
-             <Link activeClass="active" to="Skills" spy={true} smooth={true} offset={50} duration={500} >Skills</Link>
+              
+               <ListItemIcon>
+           <TipsAndUpdatesIcon sx={{color:'black'}} />
+              </ListItemIcon>
+             <Link className='w-[100%] text-xl' onClick={toggleDrawer('left', false)} onKeyDown={toggleDrawer('left', false)} activeClass="active" to="Skills" spy={true} smooth={true} offset={50} duration={500} >Skills</Link>
             </ListItemButton>
           </ListItem>
           
           
            <ListItem  disablePadding>
             <ListItemButton>
-             <Link activeClass="active" to="Projects" spy={true} smooth={true} offset={50} duration={500} >Projects</Link>
+               <ListItemIcon>
+           <AddTaskIcon sx={{color:'black'}}/>
+              </ListItemIcon>
+             <Link className='w-[100%] text-xl' onClick={toggleDrawer('left', false)} onKeyDown={toggleDrawer('left', false)} activeClass="active" to="Projects" spy={true} smooth={true} offset={50} duration={500} >Projects</Link>
             </ListItemButton>
           </ListItem>
           
           
           <ListItem  disablePadding>
             <ListItemButton>
-             <Link activeClass="active" to="Certifications" spy={true} smooth={true} offset={50} duration={500} >Certifications</Link>
+               <ListItemIcon>
+           <EmojiEventsIcon sx={{color:'black'}}/>
+              </ListItemIcon>
+
+             <Link className='w-[100%] text-xl' onClick={toggleDrawer('left', false)} onKeyDown={toggleDrawer('left', false)} activeClass="active" to="Certifications" spy={true} smooth={true} offset={50} duration={500} >Certifications</Link>
             </ListItemButton>
           </ListItem> 
           
           <ListItem  disablePadding>
             <ListItemButton>
-         <Link activeClass="active" to="ContactMe" spy={true} smooth={true} offset={50} duration={500} >Contact Me</Link>
+               <ListItemIcon sx={{color:'black'}}>
+           <LinkIcon/>
+              </ListItemIcon>
+         <Link className='w-[100%] text-xl' onClick={toggleDrawer('left', false)} onKeyDown={toggleDrawer('left', false)} activeClass="active" to="ContactMe" spy={true} smooth={true} offset={50} duration={500} >Contact Me</Link>
             </ListItemButton>
           </ListItem>
       

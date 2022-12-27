@@ -1,7 +1,7 @@
 export const certificateData = [
     {
         id: 1,
-        name: 'HTML, CSS & JavaScript For Web developers',
+        name: 'HTML, CSS & JavaScript',
         image: 'https://img.icons8.com/external-justicon-lineal-color-justicon/512/external-certificate-reward-and-badges-justicon-lineal-color-justicon.png',
         link: 'https://coursera.org/share/d5f5af58217c2091377934a6ce5e0271'
     },

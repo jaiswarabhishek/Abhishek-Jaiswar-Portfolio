@@ -14,7 +14,7 @@ function Skills() {
         <h1 className='md:pl-10 text-3xl font-bold text-center md:text-left md:text-4xl text-[#161351] '>Skills</h1>
       </div>
 
-      <div className='mt-5  '>
+      <div className='mt-5   '>
 
 <Marquee
 
@@ -35,7 +35,7 @@ function Skills() {
      return <>
      <div key={id} className='mx-5  rounded-md p-10 shadow-lg bg-white my-10 w-[13em] md:w-[15em] hover:scale-110 ease-in-out duration-300 cursor-pointer'  >
          
-          <img src={image} className='mx-auto max-w-[60%] ' alt="/" />
+          <img src={image} className='mx-auto md:max-w-[60%] max-w-[45%] ' alt="/" />
         
           <h1 className='text-center text-[#161351]    text-xl' >{name}</h1>
         </div>

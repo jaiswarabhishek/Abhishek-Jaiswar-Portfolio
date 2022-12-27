@@ -4,8 +4,6 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { Link, animateScroll as scroll } from 'react-scroll'
-import { motion } from "framer-motion";
-import Reveal from 'react-reveal/Reveal';
 import Fade from 'react-reveal/Fade';
 
 
@@ -31,42 +29,42 @@ function AboutMe() {
     
          <h1  className='md:text-4xl text-xl font-[400] text-[#161351] ' >Hello folks! , I'm Abhishek</h1> 
 
-        <img src={greet} className='block max-w-[6%] md:max-w-[7%] mx-2' alt="/" />
+        <img src={greet} className='block max-w-[7%]  mx-2' alt="/" />
        </div>
 
-       <h3 className='md:pl-10 md:pr-10 mt-2 text-[1em] mx-auto md:mx-0 md:text-left text-left md:text-xl max-w-[90%]' >
+       <h3 className='md:pl-10 md:pr-10 mt-2 text-[1em] mx-auto md:mx-0 md:text-left text-left md:text-xl max-w-[94%]' >
           I'm a passionate full-stack web developer with 1 and a half years of experience. I have spent the last 2 years developing my skills as a software developer.I am a good problem solver. 3-star coder on Hackerrank. I am also interested in open source. This year, I participated in Hacktoberfest as a contributor and completed it successfully.
        </h3>
 
 
-       <div className='md:pl-10 mt-5 flex md:justify-start justify-center  '>
-        <Link href="https://github.com/AbhishekTesla"   target="_blank"   >
-           <GitHubIcon sx={{width:45,height:45,marginRight:3,color:'black' }}/>
-        </Link>
+       <div className='md:pl-10 mt-8 flex md:justify-start mx-auto justify-center  '>
+        <a href="https://github.com/AbhishekTesla"   target="_blank" rel="noreferrer"   >
+           <GitHubIcon sx={{width:35,height:35,marginRight:3,color:'black' }}/>
+        </a>
         
-         <Link href="https://www.linkedin.com/in/abhishek-jaiswar-59865b21a/"  target="_blank" >
-           <LinkedInIcon sx={{width:45,height:45,marginRight:3,color:'#0A66C2' }} />
-        </Link>
+         <a href="https://www.linkedin.com/in/abhishek-jaiswar-59865b21a/"  target="_blank" rel="noreferrer" >
+           <LinkedInIcon sx={{width:35,height:35,marginRight:3,color:'#0A66C2' }} />
+        </a>
         
-        <Link href="https://twitter.com/abhishek_659"  target="_blank" >
-           <TwitterIcon sx={{ width:45,height:45,marginRight:3,color:'#00acee' }} />
-        </Link>
+        <a href="https://twitter.com/abhishek_659"  target="_blank" rel="noreferrer" >
+           <TwitterIcon sx={{ width:35,height:35,marginRight:3,color:'#00acee' }} />
+        </a>
         
         
-        <Link href="https://www.instagram.com/_abhishek.js/"  target="_blank" >
-            <InstagramIcon sx={{ width:45,height:45,marginRight:3,color:'#E4405F' }} />
-        </Link>
+        <a href="https://www.instagram.com/_abhishek.js/"  target="_blank"  rel="noreferrer" >
+            <InstagramIcon sx={{ width:35,height:35,marginRight:3,color:'#E4405F' }} />
+        </a>
        </div>
 
        <div className='flex md:flex-row flex-col  md:pl-10 mt-5  gap-4'>
 
         <button className='border-0 rounded-md text-white md:w-auto md:mx-0 w-[70%] mx-auto  p-3 text-[1.1em]'>Resume</button>
 
+        <Link activeClass="active" to="ContactMe" className='text-center' spy={true} smooth={true} offset={50} duration={500} >
           <button className='border-0 rounded-md text-white md:w-auto w-[70%] md:mx-0 mx-auto   p-3 text-[1.1em]'>
-        <Link activeClass="active" to="ContactMe" spy={true} smooth={true} offset={50} duration={500} >
           Contact Me
-         </Link>
          </button>
+         </Link>
        
        </div>
 
