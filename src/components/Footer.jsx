@@ -15,7 +15,7 @@ function Footer() {
             So, I am not meant for crawling
             I have wings, I will fly..."
            </i>
-         <h1 className='md:text-xl text-[0.7em]'>―<i className='md:text-xl text-[0.7em]'> Jalaluddin Rumi</i></h1>
+         <h1 className='md:text-xl text-[0.8em]'>―<i className='md:text-xl text-[0.8em]'> Jalaluddin Rumi</i></h1>
        </div>
        <div className='flex items-center justify-between mt-2 flex-row  '>
        <h1 className='text-left  text-[0.85em] ml-2 pb-2'>| © 2022-2023 Abhishek Jaiswar</h1>

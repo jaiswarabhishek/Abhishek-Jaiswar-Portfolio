@@ -7,13 +7,14 @@ import { Link, animateScroll as scroll } from 'react-scroll'
 import Fade from 'react-reveal/Fade';
 
 
+// background-image: linear-gradient(90deg,#dbdbde30 1px,transparent 0),linear-gradient(180deg,#dbdbde30 1px,transparent 0);
 
 function AboutMe() {
      const img ="https://img.freepik.com/premium-vector/programmer-engineering-development-coding-web-development-website-design-developer-vector_199064-126.jpg?w=740" ;
      
      const greet ="https://media.tenor.com/yWSRmymbuBkAAAAM/waving-hi.gif";
 
-    
+ 
 
 
   return (
@@ -27,13 +28,13 @@ function AboutMe() {
 
        <div className=' flex justify-center items-center md:mt-0 mt-7'>
     
-         <h1  className='md:text-4xl text-xl font-[400] text-[#161351] ' >Hello folks! , I'm Abhishek</h1> 
-
+         <h1  className='md:text-4xl text-xl  font-normal text-black  ' >Hello folks! , I'm Abhishek</h1> 
         <img src={greet} className='block max-w-[7%]  mx-2' alt="/" />
+
        </div>
 
-       <h3 className='md:pl-10 md:pr-10 mt-2 text-[1em] mx-auto md:mx-0 md:text-left text-left md:text-xl max-w-[94%]' >
-          I'm a passionate full-stack web developer with 1 and a half years of experience. I have spent the last 2 years developing my skills as a software developer.I am a good problem solver. 3-star coder on Hackerrank. I am also interested in open source. This year, I participated in Hacktoberfest as a contributor and completed it successfully.
+       <h3 className='md:pl-10 md:pr-10 mt-2 text-[1em] mx-auto md:mx-0 md:text-left text-left  max-w-[94%]' >
+          I'm a passionate full-stack web developer with 1 years of project building experience. I have spent the last 2 years developing my skills as a software developer.I am a good problem solver. 3-star coder on Hackerrank , Solved more than 100 problems on Leetcode. I am also interested in open source. last year, I participated in Hacktoberfest as a contributor and completed it successfully.
        </h3>
 
 
@@ -57,9 +58,12 @@ function AboutMe() {
        </div>
 
        <div className='flex md:flex-row flex-col  md:pl-10 mt-5  gap-4'>
-
-        <button className='border-0 rounded-md text-white md:w-auto md:mx-0 w-[70%] mx-auto  p-3 text-[1.1em]'>Resume</button>
-
+        <button  className='border-0 rounded-md text-white md:w-auto md:mx-0 w-[70%] mx-auto  p-3 text-[1.1em]'>
+         <a href="https://drive.google.com/file/d/1DJQeZSinT9yRwmUjIrBpn1R0frcokLLc/view?usp=sharing"  target="_blank"  rel="noreferrer" >
+         Resume
+         </a>
+         </button>
+          
         <Link activeClass="active" to="ContactMe" className='text-center' spy={true} smooth={true} offset={50} duration={500} >
           <button className='border-0 rounded-md text-white md:w-auto w-[70%] md:mx-0 mx-auto   p-3 text-[1.1em]'>
           Contact Me
