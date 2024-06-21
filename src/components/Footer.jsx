@@ -22,7 +22,7 @@ function Footer() {
          
          
        <div className='md:pl-10 mb-4 flex md:justify-start justify-center ml-5 mt-3  '>
-        <Link href="https://github.com/AbhishekTesla"   target="_blank"   >
+        <Link href="https://github.com/jaiswarabhishek"   target="_blank"   >
            <GitHubIcon sx={{width:30,height:30,marginRight:1,color:'black' }}/>
         </Link>
         

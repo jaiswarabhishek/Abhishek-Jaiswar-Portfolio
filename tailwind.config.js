@@ -2,7 +2,7 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
- 
+  
     boxShadow: {
         'lg': '0 10px 15px -10px #a29dff, 0 4px 6px -4px #a29dff',
         'xl': '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)'
@@ -12,7 +12,7 @@ module.exports = {
         'caramel': ['Caramel', 'cursive']
       },
      screens: {
-      'sm': '640',
+      'sm': '240',
       // => @media (min-width: 640px) { ... }
 
       'md': '768px',
@@ -29,5 +29,7 @@ module.exports = {
     },
   
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-animated')
+  ],
 }

@@ -13,12 +13,12 @@ import './App.css'
 function App() {
   
   return (
-    <div className='app' >
+    <div className= 'scroll-smooth scroll-pt-12 app ' >
    <Navbar />
    <AboutMe />
    <Skills />
    <Projects />
-   <Certifications />
+   {/* <Certifications /> */}
    <Footer />
     </div>
   )

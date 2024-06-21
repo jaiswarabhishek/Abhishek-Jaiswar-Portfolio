@@ -1,106 +1,56 @@
 import React from 'react'
 import Marquee from "react-fast-marquee";
 import Fade from 'react-reveal/Fade';
-import { frontend } from './SkillsData';
-import { backend } from './SkillsData';
-import { languages } from './SkillsData';
+import { skills } from './SkillsData';
+import { AnimatePresence,motion } from 'framer-motion';
+import { useState } from 'react';
+
+
 
 const image= 'https://img.icons8.com/color/512/html-5.png';
 
 
 function Skills() {
+  const [isHovered, setIsHovered] = useState(false);
 
 
 
   return (
-    <div className='mt-16 ' name="Skills">
-       
-      <div className='mb-10' >
-        <h1 className='md:pl-10 text-3xl font-bold text-center md:text-left md:text-4xl text-[#161351] '>Skills</h1>
-      </div>
+    <div className='mt-16  ' name="Skills">
+      <h1 className='md:pl-10 text-3xl font-bold text-center md:text-left md:text-4xl text-[#161351]'>Skills</h1>
 
-      <div className='mt-5 md:flex md:justify-evenly gap-10 md:w-[90%] w-[80%] mx-auto '>
-    <Fade right>
-      <div className='border-0 rounded-md shadow-xl mb-10 hover:scale-105 ease-in-out duration-300 cursor-pointer'>
-       
-       <h1 className='text-center md:text-2xl text-[1.3em] text-[#161351] mb-5'>Frontend</h1>
-       <div className='border-b mb-2' />
-       <div className='grid grid-cols-2 gap-5 '>
+      <motion.div
+     
+      className=' grid lg:grid-cols-6 md:grid-cols-4 gap-8 md:p-7 p-3 grid-cols-2'
+     
+      >
         {
+          skills.map((skill)=>{
+            const {id,name,image} = skill;
+            return<>
+          <AnimatePresence>
+
+            <motion.div 
+             initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: (id+2) * 0.05, ease: "easeInOut" }} 
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            className="bg-white  	  relative py-6 basis-[150px] grow flex flex-col justify-center items-center shadow-lg rounded-xl border overflow-hidden group   before:absolute before:inset-0 before:bg-gradient-to-tr before:from-primary before:to-secondary before:opacity-0 hover:before:opacity-20 duration-200  " style={{opacity: "1", transform: "none"}} >
+              <img src={image} className='object-contain w-[6em] h-[6em]' alt="" />
+              <h3 className=' text-center my-2 font-medium'>{name}</h3>
+            </motion.div>
+
+            </AnimatePresence>
+
+            </>
+
+          })
+      }  
+      </motion.div>
        
-       frontend.map((skill)=>{
-
-       return  <div className='md:p-3 md:mb-3 ml-5 mb-5 mb:mr-0 mr-2 ' >
-         
-         <div className='flex items-center' key={skill.id} >
-          <img src={skill.image} className='block w-[25%] ' alt="" />
-          <h2 className='md:text-[1em] ml-2'>{skill.name}</h2>
-         </div>
-
-        </div>
-       })
-
-         }
-
-       </div>
-       
-      </div>
-
-
-      <div className='border-0 rounded-md shadow-xl mb-10 hover:scale-105 ease-in-out duration-300 cursor-pointer'>
-    <h1 className='text-center md:text-2xl text-[1.3em] text-[#161351] mb-5'>Backend</h1>
-    <div className='border-b mb-2' />
-     <div className='grid grid-cols-2 gap-5 '>
-        {
-       
-       backend.map((skill)=>{
-
-       return  <div className='md:p-3 md:mb-3 ml-5 mb-5 mb:mr-0 mr-2 ' >
-         
-         <div className='flex items-center ' key={skill.id} >
-          <img src={skill.image} className='block w-[25%] ' alt="" />
-          <h2 className='md:text-[1em] ml-2'>{skill.name}</h2>
-         </div>
-
-        </div>
-       })
-
-         }
-
-       </div>
-
-      </div>
-
-      <div className='border-0 rounded-md shadow-xl mb-10 hover:scale-105 ease-in-out duration-300 cursor-pointer'>
-    <h1 className='text-center md:text-2xl  text-[1.3em] text-[#161351]  mb-5'>Langauges</h1>
-    <div className='border-b mb-2' />
-
-   
-    <div className='grid grid-cols-2 gap-5'>
-       {
-       
-       languages.map((skill)=>{
-
-       return  <div className='md:p-3 md:mb-3 ml-5 mb-5 mb:mr-0 mr-2 ' >
-         
-         <div className='flex items-center' key={skill.id} >
-          <img src={skill.image} className='block w-[25%] ' alt="" />
-          <h2 className='md:text-[1em] ml-2'>{skill.name}</h2>
-         </div>
-
-        </div>
-       })
-
-         }
-    </div>
-
-
-      </div>
-
-
-
-      </Fade>
-      </div>
+     
 
 
     </div>
@@ -108,3 +58,8 @@ function Skills() {
 }
 
 export default Skills
+
+
+
+
+{/* <div class="relative py-6 basis-[150px] grow flex flex-col justify-center items-center shadow-lg rounded-xl border overflow-hidden group before:absolute before:inset-0 before:bg-gradient-to-tr before:from-primary before:to-secondary before:opacity-0 hover:before:opacity-20 duration-200" style="opacity: 1; transform: none;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" class="object-contain w-12 h-12" alt="VS Code"><h3 class="my-2 font-medium">VS Code</h3></div> */}
